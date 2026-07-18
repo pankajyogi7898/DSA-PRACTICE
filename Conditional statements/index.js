@@ -22,3 +22,15 @@ const propmt = require("prompt-sync")()
 //     console.log("Odd")
 // }
 
+
+//3. Write a program that takes an integer representing a year as input and checks whether it is a leap year. A year is considered a leap year if it satisfies either of the following conditions: 1. It is divisible by 4 but not divisible by 100, or 2. It is divisible by 400. •. If the year is a leap year, print "Leap Year". •. Otherwise, print "Not a Leap Year".
+
+let year = Number(propmt("Enter year: "));
+
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log("Leap Year");
+}
+else {
+    console.log("Not a Leap Year");
+}
+
