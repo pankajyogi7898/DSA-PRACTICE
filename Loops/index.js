@@ -22,12 +22,18 @@ const propmt = require("prompt-sync")()
 // console.log(sum);
 
 // 4. Write a program that accepts an integer "n" as input and calculates the factorial of "n". The factorial of a non-negative integer "n" is the product of all positive integers less than or equal to "n": n! = n x (n-1) x (n-2) x … x 2 x 1 • The factorial of 0 is defined as 1 → 0! = 1. print your Answer.
+// let number = Number(propmt("Enter Number: "));
+// let fact = 1;
+// for (let i = 1; i <= number; i++) {
+//     fact = fact * i;
+// }
+// console.log(fact)
+
+//5. Write a program that accepts an integer "n" as input and prints all the factors of "n". A factor of a number is an integer that divides the number evenly without leaving a remainder. The program should print each factor on a single line, space-separated, in ascending order.
 let number = Number(propmt("Enter Number: "));
-let fact = 1;
 for (let i = 1; i <= number; i++) {
-    fact = fact * i;
+    if (number % i === 0) {
+        console.log(i)
+    }
 }
-console.log(fact)
-
-
 
