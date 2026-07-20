@@ -30,10 +30,11 @@ const propmt = require("prompt-sync")()
 // console.log(fact)
 
 //5. Write a program that accepts an integer "n" as input and prints all the factors of "n". A factor of a number is an integer that divides the number evenly without leaving a remainder. The program should print each factor on a single line, space-separated, in ascending order.
-let number = Number(propmt("Enter Number: "));
-for (let i = 1; i <= number; i++) {
-    if (number % i === 0) {
-        console.log(i)
-    }
-}
+// let number = Number(propmt("Enter Number: "));
+// for (let i = 1; i <= number; i++) {
+//     if (number % i === 0) {
+//         console.log(i)
+//     }
+// }
+
 
