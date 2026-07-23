@@ -60,7 +60,13 @@ const prompt = require("prompt-sync")()
 
 //for example - koi class mein 10 student hai usko "ram" name ke ldke ko dhoodhna hai attedance le rhe hai teacher vo student 6th position pe mil gya...uske baad uske aage hi nhi jayega to aaise condition mein break ka use krte hai
 
-for (let i = 1; i <= 10; i++) {
-    if (i === 6) break;
-    console.log(i)
+let students = ["Rahul", "Aman", "Pankaj", "Rohit"];
+
+for (let i = 0; i < students.length; i++) {
+    if (students[i] === "Pankaj") {
+        console.log("Student mil gaya");
+        break;
+    }
+
+    console.log("Check:", students[i]);
 }
