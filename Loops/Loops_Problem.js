@@ -60,13 +60,27 @@ const prompt = require("prompt-sync")()
 
 //for example - koi class mein 10 student hai usko "ram" name ke ldke ko dhoodhna hai attedance le rhe hai teacher vo student 6th position pe mil gya...uske baad uske aage hi nhi jayega to aaise condition mein break ka use krte hai
 
-let students = ["Rahul", "Aman", "Pankaj", "Rohit"];
+// let students = ["Rahul", "Aman", "Pankaj", "Rohit"];
+
+// for (let i = 0; i < students.length; i++) {
+//     if (students[i] === "Pankaj") {
+//         console.log("Student mil gaya");
+//         break;
+//     }
+//     console.log("Check:", students[i]);
+// }
+
+//5. use a continue statement - jab loops chalta rhta hai aur hame koi condition par loop ko rok kr turnt agle iteration par jana hota hai vaha pr continue use krte hai.
+
+//for example - koi class mein 10 student  ,koi teacher attandance le rhi hai ,aur yadi  6th number ka student class nhi aaya hai to uska name skip krke next student ka attendance lega..
+
+
+let students = ["Rahul", "Aman", "Pankaj", "Rohit", "Siraj", "Aakash", "Pinky", "Jyoti", "Yogesh", "Ramu"];
 
 for (let i = 0; i < students.length; i++) {
     if (students[i] === "Pankaj") {
-        console.log("Student mil gaya");
-        break;
+        console.log(` Absent :: ${students[i]}  `);
+        continue;
     }
-
-    console.log("Check:", students[i]);
+    console.log("Present:", students[i]);
 }
