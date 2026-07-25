@@ -74,13 +74,25 @@ const prompt = require("prompt-sync")()
 
 //for example - koi class mein 10 student  ,koi teacher attandance le rhi hai ,aur yadi  6th number ka student class nhi aaya hai to uska name skip krke next student ka attendance lega..
 
+// let students = ["Rahul", "Aman", "Pankaj", "Rohit", "Siraj", "Aakash", "Pinky", "Jyoti", "Yogesh", "Ramu"];
 
-let students = ["Rahul", "Aman", "Pankaj", "Rohit", "Siraj", "Aakash", "Pinky", "Jyoti", "Yogesh", "Ramu"];
+// for (let i = 0; i < students.length; i++) {
+//     if (students[i] === "Pankaj") {
+//         console.log(` Absent :: ${students[i]}  `);
+//         continue;
+//     }
+//     console.log("Present:", students[i]);
+// }
 
-for (let i = 0; i < students.length; i++) {
-    if (students[i] === "Pankaj") {
-        console.log(` Absent :: ${students[i]}  `);
-        continue;
+//6. Sum of all Even Numbers from 1 to n
+
+let n = Number(prompt("Enter a number: "));
+let sum = 0;
+
+for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+        sum = sum + i;
     }
-    console.log("Present:", students[i]);
 }
+
+console.log(sum);
