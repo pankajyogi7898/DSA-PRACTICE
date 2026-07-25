@@ -113,16 +113,34 @@ const prompt = require("prompt-sync")()
 
 //8 Accept a number n and check whether it is a Perfect Number. Print "Yes" or "No".
 
+// let n = Number(prompt("Enter a number: "));
+// let sum = 0;
+
+// for (let i = 1; i < n; i++) {
+//     if (n % i === 0) {
+//         sum = sum + i;
+//     }
+// }
+
+// if (sum === n) {
+//     console.log("Yes");
+// } else {
+//     console.log("No");
+// }
+
+//9 Accept a number n and check whether it is an Armstrong Number. Print "Yes" or "No".
+
 let n = Number(prompt("Enter a number: "));
+let original = n;
 let sum = 0;
 
-for (let i = 1; i < n; i++) {
-    if (n % i === 0) {
-        sum = sum + i;
-    }
+while (n > 0) {
+    let digit = n % 10;
+    sum = sum + (digit * digit * digit);
+    n = Math.floor(n / 10);
 }
 
-if (sum === n) {
+if (sum === original) {
     console.log("Yes");
 } else {
     console.log("No");
