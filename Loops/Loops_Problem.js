@@ -86,11 +86,25 @@ const prompt = require("prompt-sync")()
 
 //6. Sum of all Even Numbers from 1 to n
 
+// let n = Number(prompt("Enter a number: "));
+// let sum = 0;
+
+// for (let i = 1; i <= n; i++) {
+//     if (i % 2 === 0) {
+//         sum = sum + i;
+//     }
+// }
+
+// console.log(sum);
+
+ 
+//7. Sum of all Odd Numbers from 1 to n
+
 let n = Number(prompt("Enter a number: "));
 let sum = 0;
 
 for (let i = 1; i <= n; i++) {
-    if (i % 2 === 0) {
+    if (i % 2 !== 0) {
         sum = sum + i;
     }
 }
