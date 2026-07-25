@@ -97,16 +97,33 @@ const prompt = require("prompt-sync")()
 
 // console.log(sum);
 
- 
+
 //7. Sum of all Odd Numbers from 1 to n
+
+// let n = Number(prompt("Enter a number: "));
+// let sum = 0;
+
+// for (let i = 1; i <= n; i++) {
+//     if (i % 2 !== 0) {
+//         sum = sum + i;
+//     }
+// }
+
+// console.log(sum);
+
+//8 Accept a number n and check whether it is a Perfect Number. Print "Yes" or "No".
 
 let n = Number(prompt("Enter a number: "));
 let sum = 0;
 
-for (let i = 1; i <= n; i++) {
-    if (i % 2 !== 0) {
+for (let i = 1; i < n; i++) {
+    if (n % i === 0) {
         sum = sum + i;
     }
 }
 
-console.log(sum);
+if (sum === n) {
+    console.log("Yes");
+} else {
+    console.log("No");
+}
