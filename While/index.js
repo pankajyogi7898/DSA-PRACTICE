@@ -13,12 +13,38 @@ let prompt = require("prompt-sync")()
 
 //2. Write a program that accepts a positive integer "n" as input and return the reverse of the number.
 
+// let n = Number(prompt("Enter Number : "))
+// let reverse = 0
+// while (n > 0) {
+//     let rem = n % 10
+//     reverse = rem + (reverse * 10)
+//     n = Math.floor(n / 10)
+// }
+// console.log(reverse)
 
-let n = Number(prompt("Enter Number : "))
-let reverse = 0
-while (n > 0) {
-    let rem = n % 10
-    reverse = rem + (reverse * 10)
-    n = Math.floor(n / 10)
+//3. Write a program that accepts a 10-digit ISBN number and checks whether it is a valid ISBN number or not.
+// valid isbn no - 0201314525 , 0131103628 , 8175257660
+//invalid isbn no  - 0201314524 , 0132350883 , 0201633613
+
+
+let num = Number(prompt("Enter Number : "))
+let print = num
+let copy = num;
+let count = 0;
+while (num > 0) {
+    count++;
+    num = Math.floor(num / 10)
 }
-console.log(reverse)
+if (count != 10) console.log("Invalid ISBN number");
+else {
+    let ans = 0;
+    while (copy > 0) {
+        let digit = copy % 10
+        ans = ans + (count * digit)
+        count--
+        copy = Math.floor(copy / 10)
+    }
+    console.log(ans % 11 === 0 ? `${print} is Valid ISBN` : `${print} is Invalid ISBN`)
+}
+
+
