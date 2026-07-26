@@ -53,15 +53,29 @@ let prompt = require("prompt-sync")()
 // An Automorphic Number is a number whose square ends with the same digits as the number itself.
 
 
-let num = Number(prompt("Enter Number : "))
-let copy = num;
-let count = 0;
-let sq = num * num
-while (num > 0) {
-    count++;
-    num = Math.floor(num / 10)
-}
-if (sq % Math.pow(10, count) == copy) console.log("AUTOMORPHIC Number");
-else {
-    console.log("Not AUTOMORPHIC Number");
-}
+// let num = Number(prompt("Enter Number : "))
+// let copy = num;
+// let count = 0;
+// let sq = num * num
+// while (num > 0) {
+//     count++;
+//     num = Math.floor(num / 10)
+// }
+// if (sq % Math.pow(10, count) == copy) console.log("AUTOMORPHIC Number");
+// else {
+//     console.log("Not AUTOMORPHIC Number");
+// }
+
+//5. do while loop - Write a program to Computer generate a random number b/w 1 to 100 and user guess the number is correct or not
+
+let computer = Math.floor((Math.random() * 100) + 1)
+let user;
+do {
+    user = Number(prompt("Enter a number b/w 1 to 100 : "))
+    if (user > computer) console.log("To Large");
+    else if (user < computer) console.log("To Small");
+    else if (user == computer) console.log(`Congratulations!! , you guessed number is Correct ${computer}`);
+    else {
+        console.log("Invalid Number..");
+    }
+} while (user != computer);
