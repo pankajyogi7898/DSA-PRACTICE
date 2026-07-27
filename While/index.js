@@ -68,14 +68,14 @@ let prompt = require("prompt-sync")()
 
 //5. do while loop - Write a program to Computer generate a random number b/w 1 to 100 and user guess the number is correct or not
 
-let computer = Math.floor((Math.random() * 100) + 1)
-let user;
-do {
-    user = Number(prompt("Enter a number b/w 1 to 100 : "))
-    if (user > computer) console.log("To Large");
-    else if (user < computer) console.log("To Small");
-    else if (user == computer) console.log(`Congratulations!! , you guessed number is Correct ${computer}`);
-    else {
-        console.log("Invalid Number..");
-    }
-} while (user != computer);
+// let computer = Math.floor((Math.random() * 100) + 1)
+// let user;
+// do {
+//     user = Number(prompt("Enter a number b/w 1 to 100 : "))
+//     if (user > computer) console.log("To Large");
+//     else if (user < computer) console.log("To Small");
+//     else if (user == computer) console.log(`Congratulations!! , you guessed number is Correct ${computer}`);
+//     else {
+//         console.log("Invalid Number..");
+//     }
+// } while (user != computer);
