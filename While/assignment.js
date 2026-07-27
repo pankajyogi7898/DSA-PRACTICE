@@ -17,15 +17,37 @@ let prompt = require("prompt-sync")()
 
 //2. An Abundant Number is a number for which the sum of its proper divisors (divisors excluding the number itself) is greater than the number. Your task is to write a program to determine if a given number is an Abundant Numbers. Return "Yes" or "No".
 
+// let num = Number(prompt("Enter a Number :"))
+// let sum = 0;
+// for (let i = 1; i <= num / 2; i++) {
+//     if (num % i == 0) {
+//         sum = sum + i
+//     }
+
+// }
+// console.log(sum > num ? `Number ${num} is Abundant` : `Number ${num} is Not Abundant`);
+
+//3. Write a program to find and print all the prime factors of a given number. A prime factor is a factor that is a prime number. If the number is 0 or 1, print No prime factors.
+
 let num = Number(prompt("Enter a Number :"))
-let sum = 0;
-for (let i = 1; i <= num / 2; i++) {
-    if (num % i == 0) {
-        sum = sum + i
+
+for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+        let prime = true
+        if (i < 2) {
+            prime = false;
+        }
+        else {
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    prime = false
+                    break;
+                }
+            }
+            if (prime) {
+                console.log(i);
+            }
+        }
+
     }
-
 }
-console.log(sum > num ? `Number ${num} is Abundant` : `Number ${num} is Not Abundant`);
-
-
-
