@@ -64,9 +64,11 @@ let n = Number(prompt("Enter a Number :"))
 
 for (let i = 1; i <= n; i++) {
     for (j = 1; j <= i; j++) {
-        process.stdout.write("* ")
+        process.stdout.write(` ${j} `)
     }
     console.log(" ")
 }
+
+
 
 
