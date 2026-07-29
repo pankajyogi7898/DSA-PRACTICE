@@ -29,25 +29,44 @@ let prompt = require("prompt-sync")()
 
 //3. Write a program to find and print all the prime factors of a given number. A prime factor is a factor that is a prime number. If the number is 0 or 1, print No prime factors.
 
-let num = Number(prompt("Enter a Number :"))
+// let num = Number(prompt("Enter a Number :"))
 
-for (let i = 1; i <= num; i++) {
-    if (num % i === 0) {
-        let prime = true
-        if (i < 2) {
-            prime = false;
-        }
-        else {
-            for (let j = 2; j < i; j++) {
-                if (i % j === 0) {
-                    prime = false
-                    break;
-                }
-            }
-            if (prime) {
-                console.log(i);
-            }
-        }
+// for (let i = 1; i <= num; i++) {
+//     if (num % i === 0) {
+//         let prime = true
+//         if (i < 2) {
+//             prime = false;
+//         }
+//         else {
+//             for (let j = 2; j < i; j++) {
+//                 if (i % j === 0) {
+//                     prime = false
+//                     break;
+//                 }
+//             }
+//             if (prime) {
+//                 console.log(i);
+//             }
+//         }
 
+//     }
+// }
+
+
+//4. Write a program that takes an integer n as input and prints a right triangle star pattern with n rows. • Each row should contain stars (*) with spaces between them. • The number of stars increases as you move from the first row to the nth row.
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+let n = Number(prompt("Enter a Number :"))
+
+for (let i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+        process.stdout.write("* ")
     }
+    console.log(" ")
 }
+
+
