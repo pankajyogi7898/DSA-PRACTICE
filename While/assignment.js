@@ -70,16 +70,35 @@ let prompt = require("prompt-sync")()
 // }
 
 //5. Mirror right triangle
-let n = Number(prompt("Enter Number : "))
-for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= n - i; j++) {
-        process.stdout.write("  ")
-    }
-    for (j = 1; j <= i; j++) {
-        process.stdout.write("* ")
-    }
-    console.log()
+// let n = Number(prompt("Enter Number : "))
+// for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n - i; j++) {
+//         process.stdout.write("  ")
+//     }
+//     for (j = 1; j <= i; j++) {
+//         process.stdout.write("* ")
+//     }
+//     console.log()
 
+// }
+
+//6. given a positive number n minmum number 3 print v shape
+let n = Number(prompt("Enter Number : "))
+for (let i = 0; i < n; i++) {
+    // Left spaces
+    for (let j = 0; j < i; j++) {
+        process.stdout.write(" ");
+    }
+    // Left star
+    process.stdout.write("*");
+    // Middle spaces and right star
+    if (i !== n - 1) {
+        for (let j = 0; j < 2 * (n - i - 1) - 1; j++) {
+            process.stdout.write(" ");
+        }
+        process.stdout.write("*");
+    }
+    console.log();
 }
 
 
