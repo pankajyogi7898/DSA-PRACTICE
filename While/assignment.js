@@ -83,23 +83,37 @@ let prompt = require("prompt-sync")()
 // }
 
 //6. given a positive number n minmum number 3 print v shape
+// let n = Number(prompt("Enter Number : "))
+// for (let i = 0; i < n; i++) {
+//     // Left spaces
+//     for (let j = 0; j < i; j++) {
+//         process.stdout.write(" ");
+//     }
+//     // Left star
+//     process.stdout.write("*");
+//     // Middle spaces and right star
+//     if (i !== n - 1) {
+//         for (let j = 0; j < 2 * (n - i - 1) - 1; j++) {
+//             process.stdout.write(" ");
+//         }
+//         process.stdout.write("*");
+//     }
+//     console.log();
+// }
+
+//6. given a positive number n  print X shape.
 let n = Number(prompt("Enter Number : "))
 for (let i = 0; i < n; i++) {
-    // Left spaces
-    for (let j = 0; j < i; j++) {
-        process.stdout.write(" ");
-    }
-    // Left star
-    process.stdout.write("*");
-    // Middle spaces and right star
-    if (i !== n - 1) {
-        for (let j = 0; j < 2 * (n - i - 1) - 1; j++) {
+    for (let j = 0; j < n; j++) {
+        if (j === i || j === n - 1 - i) {
+            process.stdout.write("*");
+        } else {
             process.stdout.write(" ");
         }
-        process.stdout.write("*");
     }
     console.log();
 }
+
 
 
 
